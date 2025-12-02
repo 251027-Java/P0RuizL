@@ -100,6 +100,26 @@
                   </annotationProcessorPaths>
               </configuration>
           </plugin>
+
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>3.6.2</version> <!-- Use the latest version -->
+                <configuration>
+                    <mainClass>com.fantasy.Main</mainClass>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>run-java-app</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                    
+                    </execution>
+                </executions>
+            </plugin>
       </plugins>
   </build>
 
